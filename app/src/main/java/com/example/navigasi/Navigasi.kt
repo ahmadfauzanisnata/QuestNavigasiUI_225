@@ -28,13 +28,20 @@ fun DataApp (
             composable(route = Navigasi.Formulir.name) {
                 FormIsian(
                     onSubmitButtonCLicked = {
-                    navController.navigate(Navigasi.Detail.name)
-                })
-        }
+                        navController.navigate(Navigasi.Detail.name)
+                    })
+            }
             composable(route = Navigasi.Detail.name) {
                 TampilData(
-                    onBackBtnClick = {cancelAndBackToFormulir(navController)}
+                    onBackBtnClick = { cancelAndBackToFormulir(navController) }
                 )
             }
+        }
     }
+}
+
+private fun cancelAndBackToFormulir(
+    navController: NavHostController
+) {
+    navController.popBackStack(route = Navigasi.Formulir.name, inclusive = false)
 }

@@ -52,4 +52,6 @@ fun TampilData(
             Column(
                 modifier = Modifier.padding(all = dimensionResource(id = R.dimen.padding_medium)),
                 verticalArrangement = Arrangement.spacedBy(space = dimensionResource(id = R.dimen.padding_small))
-            ) 
+            ) {
+                items.forEach { item ->
+                    Column 

@@ -66,4 +66,5 @@ fun TampilData(
                             fontSize = 22.sp
                         )
                     }
-                 
+                    HorizontalDivider(thickness = 1.dp, color = Color.Cyan)
+                }
